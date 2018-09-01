@@ -1,0 +1,41 @@
+Traceback (most recent call last):
+  File "F:\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 380, in _make_request
+    httplib_response = conn.getresponse(buffering=True)
+TypeError: getresponse() got an unexpected keyword argument 'buffering'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:/Codes/Python/itChat/CloudBot/CloudBot.py", line 198, in <module>
+    itchat.auto_login(hotReload=True, enableCmdQR=2)
+  File "F:\Anaconda3\lib\site-packages\itchat\components\register.py", line 32, in auto_login
+    loginCallback=loginCallback, exitCallback=exitCallback)
+  File "F:\Anaconda3\lib\site-packages\itchat\components\login.py", line 53, in login
+    status = self.check_login()
+  File "F:\Anaconda3\lib\site-packages\itchat\components\login.py", line 133, in check_login
+    r = self.s.get(url, params=params, headers=headers)
+  File "F:\Anaconda3\lib\site-packages\requests\sessions.py", line 521, in get
+    return self.request('GET', url, **kwargs)
+  File "F:\Anaconda3\lib\site-packages\requests\sessions.py", line 508, in request
+    resp = self.send(prep, **send_kwargs)
+  File "F:\Anaconda3\lib\site-packages\requests\sessions.py", line 618, in send
+    r = adapter.send(request, **kwargs)
+  File "F:\Anaconda3\lib\site-packages\requests\adapters.py", line 440, in send
+    timeout=timeout
+  File "F:\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 601, in urlopen
+    chunked=chunked)
+  File "F:\Anaconda3\lib\site-packages\urllib3\connectionpool.py", line 383, in _make_request
+    httplib_response = conn.getresponse()
+  File "F:\Anaconda3\lib\http\client.py", line 1331, in getresponse
+    response.begin()
+  File "F:\Anaconda3\lib\http\client.py", line 297, in begin
+    version, status, reason = self._read_status()
+  File "F:\Anaconda3\lib\http\client.py", line 258, in _read_status
+    line = str(self.fp.readline(_MAXLINE + 1), "iso-8859-1")
+  File "F:\Anaconda3\lib\socket.py", line 586, in readinto
+    return self._sock.recv_into(b)
+  File "F:\Anaconda3\lib\site-packages\urllib3\contrib\pyopenssl.py", line 280, in recv_into
+    return self.connection.recv_into(*args, **kwargs)
+  File "F:\Anaconda3\lib\site-packages\OpenSSL\SSL.py", line 1714, in recv_into
+    result = _lib.SSL_read(self._ssl, buf, nbytes)
+KeyboardInterrupt
